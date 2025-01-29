@@ -1,9 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Icons from '../IconsRow';
 import Profile from './Profile';
-import Calendar from 'react-calendar';
-import CalendarComponent from '../assets/Calender';
 
 const Header = () => {
   return (
@@ -35,7 +32,7 @@ const Header = () => {
         </div>
 
         {/* Right side search bar */}
-        <div className="ml-auto flex items-center gap-3 z-10 ml-20">
+        <div className="ml-auto flex items-center gap-3 z-10 ">
           <input
             type="text"
             placeholder="Search..."
@@ -52,9 +49,7 @@ const Header = () => {
         <div className="absolute right-0 top-0 h-full w-16 bg-gradient-to-l from-white to-transparent pointer-events-none"></div>
         
       </div>
-    
-    <div><CalendarComponent/></div>
-      
+          
     
     <div>
     <Profile/>

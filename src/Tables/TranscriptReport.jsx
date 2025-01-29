@@ -5,10 +5,10 @@ export default function TranscriptReport() {
   return (
     <div>
       <div className="max-w-5xl h-full ml-5 mt-10 pt-5 relative  rounded-xl  ">
-      <diV className="flex relative mr-5 ">
+      <div className="flex relative mr-5 ">
       <FaFileAlt className="ml-5  hover:scale-105 text-blue-500" size={40} />
       <h2 className="text-xl ml-5 font-semibold mb-5 ">Transcript Report</h2>
-      </diV>
+      </div>
 
         <ul className="space-y-4">
           {/* Column Headings */}

@@ -1,5 +1,5 @@
 import React from "react";
-import { FaBook, FaClipboardList, FaCheckCircle, FaTimesCircle } from "react-icons/fa";
+import { FaBook } from "react-icons/fa";
 
 
 const Card = ({ logo, count, text, bgColor }) => {
@@ -9,7 +9,7 @@ const Card = ({ logo, count, text, bgColor }) => {
         {logo}
       </div>
       <p className="text-2xl font-bold pt-4 text-center">{count}</p>
-      <p className="text-xl text-gray-500 pt-6 text-center text-[#86A789]">{text}</p>
+      <p className="text-xl  pt-6 text-center text-[#86A789]">{text}</p>
     </div>
   );
 };

@@ -16,6 +16,8 @@
     "@mui/material": "^6.4.1",
     "@mui/x-date-pickers": "^7.24.1",
     "@mui/x-date-pickers-pro": "^7.24.1",
+    "@nivo/bar": "^0.88.0",
+    "@nivo/pie": "^0.88.0",
     "@syncfusion/ej2-react-charts": "^28.1.41",
     "chart.js": "^4.4.7",
     "chartjs-adapter-date-fns": "^3.0.0",
@@ -31,7 +33,6 @@
   "optionalDependencies": {
     "@rollup/rollup-win32-x64-msvc": "^4.32.0"
   },
-
   "devDependencies": {
     "@eslint/js": "^9.17.0",
     "@types/react": "^18.3.18",
