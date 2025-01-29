@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import StatCard from "../components/StatCard";
 import QuickAction from "../components/QuickAction";
 import { FaUsers, FaTasks, FaBook } from "react-icons/fa";
 import { ResponsivePie } from "@nivo/pie";
 import { ResponsiveBar } from "@nivo/bar";
-import { Pie, Bar } from "react-chartjs-2";
 import {
   Chart as ChartJS,
   ArcElement,
@@ -20,7 +19,6 @@ import dayjs from "dayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DateCalendar } from "@mui/x-date-pickers/DateCalendar";
-import GraphCard from "../components/GraphCard";
 import BaseLayout from "../layouts/BaseLayout";
 import ComplianceReport from "../Tables/ComplianceReport";
 import TranscriptReport from "../Tables/TranscriptReport";

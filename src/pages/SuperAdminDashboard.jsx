@@ -3,22 +3,33 @@ import BaseLayout from "../layouts/BaseLayout";
 import { Card } from "../components/Card";
 import { FaClipboardList, FaFileAlt, FaClock, FaTimesCircle } from "react-icons/fa";
 import ActiveList from "../Tables/ActiveList";
-import { Pie } from "react-chartjs-2";
+import { ResponsivePie } from '@nivo/pie';
 
 
 export default function SuperAdminDashboard() {
 
-  const analyticsData = {
-    labels: ["Completed", "Pending", "In Progress"],
-    datasets: [
+    // Pie chart data
+    const analyticsData = [
       {
-        label: "Course Progress",
-        data: [10, 5, 15], // Example data
-        backgroundColor: ["#4CAF50", "#FFCE56", "#36A2EB"],
-        hoverBackgroundColor: ["#45A049", "#FFCE56", "#36A2EB"],
+        "id": "Category A",
+        "label": "Category A",
+        "value": 40,
+        "color": "#FF6384"
       },
-    ],
-  };
+      {
+        "id": "Category B",
+        "label": "Category B",
+        "value": 30,
+        "color": "#36A2EB"
+      },
+      {
+        "id": "Category C",
+        "label": "Category C",
+        "value": 30,
+        "color": "#FFCE56"
+      }
+    ];
+  
 
 
   return (
@@ -59,12 +70,26 @@ export default function SuperAdminDashboard() {
       </div>
       <div className="lg:col-span-12 pt-4">
           <ActiveList/>
-        <div className="p-6 bg-white shadow-md rounded-xl w-full mt-6">
-          <h3 className="font-semibold text-lg mb-4">Analytics</h3>
-          <div className="w-full h-64">
-            <Pie data={analyticsData} />
-          </div>
-        </div>
+          <div className="p-6 bg-white shadow-md rounded-xl w-full mt-6">
+      <h3 className="font-semibold text-lg mb-4">Analytics</h3>
+      <div className="w-full h-64">
+        <ResponsivePie
+          data={analyticsData}
+          margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
+          innerRadius={0.5}
+          padAngle={0.7}
+          cornerRadius={3}
+          activeOuterRadiusOffset={8}
+          colors={d => d.data.color}
+          borderWidth={1}
+          borderColor="white"
+          enableArcLinkLabels={false}
+          enableArcLabels={true}
+          arcLabel={(e) => `${e.id}: ${e.value}%`}
+        />
+      </div>
+    </div>
+
       </div>
       
     </BaseLayout>
