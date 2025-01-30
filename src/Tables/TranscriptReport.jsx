@@ -5,10 +5,10 @@ export default function TranscriptReport() {
   return (
     <div>
       <div className="max-w-5xl h-full ml-5 mt-10 pt-5 relative  rounded-xl  ">
-      <div className="flex relative mr-5 ">
+      <diV className="flex relative mr-5 ">
       <FaFileAlt className="ml-5  hover:scale-105 text-blue-500" size={40} />
       <h2 className="text-xl ml-5 font-semibold mb-5 ">Transcript Report</h2>
-      </div>
+      </diV>
 
         <ul className="space-y-4">
           {/* Column Headings */}
@@ -27,7 +27,7 @@ export default function TranscriptReport() {
             >
               {/* Student Name */}
               <div className="flex items-center gap-4 w-1/3">
-                <div className="w-10 h-10 bg-blue-500 text-white rounded-full flex items-center justify-center font-bold">
+                <div className="w-10 h-10 bg-teal-400 text-white rounded-full flex items-center justify-center font-bold">
                   {item.studentInitial}
                 </div>
                 <span className="font-medium">{item.studentName}</span>

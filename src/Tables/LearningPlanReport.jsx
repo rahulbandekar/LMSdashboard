@@ -33,7 +33,7 @@ export default function LearningPlanReport() {
               <div className="w-1/2 text-right flex items-center gap-2">
                 <div className="relative w-3/4 bg-gray-200 h-4 rounded-full">
                   <div
-                    className="absolute top-0 left-0 h-4 bg-green-500 rounded-full"
+                    className="absolute top-0 left-0 h-4 bg-green-800 rounded-full"
                     style={{ width: `${item.progress}%` }}
                   ></div>
                 </div>
