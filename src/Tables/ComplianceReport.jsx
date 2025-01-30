@@ -6,8 +6,8 @@ import { FaCheckSquare } from "react-icons/fa";
 export default function ComplianceReport() {
   return (
     <div>
-      <div className="max-w-xl h-full ml-5 mt-10 pt-5 relative rounded-xl ">
-        <div className="flex relative mr-5  ">
+      <div className=" max-w-xl h-full ml-5 mt-10 pt-5 relative rounded-xl ">
+        <div className="mb-5 flex relative mr-5  ">
           <FaCheckSquare className="ml-5  hover:scale-105 text-blue-500" size={40} />
           <h2 className="text-xl ml-5 font-semibold mb-5  ">Compliance Report</h2>
         </div>
