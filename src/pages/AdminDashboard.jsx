@@ -361,6 +361,7 @@ export default function AdminDashboard() {
           innerRadius={0.5}
           padAngle={2}
           cornerRadius={5}
+          activeOuterRadiusOffset={8}
           colors={{ datum: "data.color" }}
           borderWidth={2}
           borderColor={{ from: "color", modifiers: [["darker", 0.6]] }}
@@ -487,6 +488,7 @@ export default function AdminDashboard() {
             innerRadius={0.5}
             padAngle={1}
             cornerRadius={5}
+            activeOuterRadiusOffset={8}
             colors={{ datum: "data.color" }}
             borderWidth={1}
             borderColor={{ from: "color", modifiers: [["darker", 0.2]] }}
@@ -562,6 +564,7 @@ export default function AdminDashboard() {
             labelSkipWidth={12}
             labelSkipHeight={12}
             labelTextColor={{ from: "color", modifiers: [["darker", 1.6]] }}
+            
           />
         </div>
       </div>
@@ -576,6 +579,7 @@ export default function AdminDashboard() {
                   innerRadius={0.5}
                   padAngle={1}
                   cornerRadius={5}
+                  activeOuterRadiusOffset={8}
                   colors={{ datum: "data.color" }}
                   borderWidth={1}
                   borderColor={{ from: "color", modifiers: [["darker", 0.2]] }}

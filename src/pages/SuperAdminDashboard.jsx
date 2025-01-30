@@ -1,36 +1,37 @@
 import React from "react";
 import BaseLayout from "../layouts/BaseLayout";
 import { Card } from "../components/Card";
-import { FaClipboardList, FaFileAlt, FaClock, FaTimesCircle } from "react-icons/fa";
+import {
+  FaClipboardList,
+  FaFileAlt,
+  FaClock,
+  FaTimesCircle,
+} from "react-icons/fa";
 import ActiveList from "../Tables/ActiveList";
-import { ResponsivePie } from '@nivo/pie';
-
+import { ResponsivePie } from "@nivo/pie";
 
 export default function SuperAdminDashboard() {
-
-    // Pie chart data
-    const analyticsData = [
-      {
-        "id": "Category A",
-        "label": "Category A",
-        "value": 40,
-        "color": "#FF6384"
-      },
-      {
-        "id": "Category B",
-        "label": "Category B",
-        "value": 30,
-        "color": "#36A2EB"
-      },
-      {
-        "id": "Category C",
-        "label": "Category C",
-        "value": 30,
-        "color": "#FFCE56"
-      }
-    ];
-  
-
+  // Pie chart data
+  const analyticsData = [
+    {
+      id: "Category A",
+      label: "Category A",
+      value: 40,
+      color: "#FF6384",
+    },
+    {
+      id: "Category B",
+      label: "Category B",
+      value: 30,
+      color: "#36A2EB",
+    },
+    {
+      id: "Category C",
+      label: "Category C",
+      value: 30,
+      color: "#FFCE56",
+    },
+  ];
 
   return (
     <BaseLayout>
@@ -43,7 +44,7 @@ export default function SuperAdminDashboard() {
           text="Total Requirements"
           bgColor="bg-blue-500/50"
         />
-        
+
         {/* Card for Total Transcripts */}
         <Card
           logo={<FaFileAlt size={24} />}
@@ -68,30 +69,36 @@ export default function SuperAdminDashboard() {
           bgColor="bg-red-500/50"
         />
       </div>
-      <div className="lg:col-span-12 pt-4">
-          <ActiveList/>
-          <div className="p-6 bg-white shadow-md rounded-xl w-full mt-6">
-      <h3 className="font-semibold text-lg mb-4">Analytics</h3>
-      <div className="w-full h-64">
-        <ResponsivePie
-          data={analyticsData}
-          margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
-          innerRadius={0.5}
-          padAngle={0.7}
-          cornerRadius={3}
-          activeOuterRadiusOffset={8}
-          colors={d => d.data.color}
-          borderWidth={1}
-          borderColor="white"
-          enableArcLinkLabels={false}
-          enableArcLabels={true}
-          arcLabel={(e) => `${e.id}: ${e.value}%`}
-        />
-      </div>
-    </div>
+      <div className="flex w-full gap-x-6 pt-4">
+        {/* Active List on Left */}
+        <div className="w-2/3">
+          <ActiveList />
+        </div>
 
+        {/* Analytics on Right */}
+        <div className="w-1/3 p-6 bg-white shadow-md pt-4rounded-xl">
+          <h3 className="font-semibold text-lg mb-4">Analytics</h3>
+          <div className="w-full h-64">
+            <ResponsivePie
+              data={analyticsData}
+              margin={{ top: 40, right: 40, bottom: 40, left: 40 }}
+              innerRadius={0.5}
+              padAngle={2}
+              cornerRadius={5}
+              activeOuterRadiusOffset={8}
+              colors={{ datum: "data.color" }}
+              borderWidth={2}
+              borderColor={{ from: "color", modifiers: [["darker", 0.6]] }}
+              arcLinkLabelsSkipAngle={10}
+              arcLinkLabelsTextColor="#333"
+              arcLinkLabelsThickness={2}
+              arcLinkLabelsColor={{ from: "color" }}
+              arcLabelsSkipAngle={10}
+              arcLabelsTextColor="#545333"
+            />
+          </div>
+        </div>
       </div>
-      
     </BaseLayout>
   );
 }
