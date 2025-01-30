@@ -13,7 +13,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
       >
         {/* Change color using inline styles */}
         <BurgerSwipe
-          isClosed={!isOpen}
+          isClosed={isOpen}
           size={30}
           style={{ color: isOpen ? 'green' : 'black' }}
         />
