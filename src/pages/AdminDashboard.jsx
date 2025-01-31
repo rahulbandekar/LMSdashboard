@@ -105,27 +105,26 @@ export default function AdminDashboard() {
       <div className="grid gap-6 lg:grid-cols-12 items-stretch ">
         {/* Stats Section */}
         <div className="grid gap-6 lg:col-span-3">
-          <StatCard
+        <StatCard
             title="Active Users"
             value="4"
             icon={<FaUsers />}
-            bgColor="bg-blue-500"
-            textColor="text-blue-500"
-
+            bgColor="bg-gradient-to-br from-blue-500 to-amber-200"
+            textColor="text-black"
           />
           <StatCard
             title="Assigned"
             value="46"
             icon={<FaTasks />}
-            bgColor="bg-red-500"
-            textColor="text-red-500"
+            bgColor="bg-gradient-to-br from-red-500 to-amber-200"
+            textColor="text-black"
           />
           <StatCard
             title="Courses"
             value="8"
             icon={<FaBook />}
-            bgColor="bg-green-500"
-            textColor="text-green-500"
+            bgColor="bg-gradient-to-br from-green-500 to-amber-200"
+            textColor="text-black"
           />
         </div>
 

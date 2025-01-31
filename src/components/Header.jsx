@@ -14,11 +14,11 @@ const Header = () => {
         <div ></div>
 
         {/* Left side menu items */}
-        <div className="flex gap-6 z-10">
+        <div className="flex gap-6 ml-[3.5rem] z-10">
         <Link to="/super-admin">
           <div
             className="text-black shadow-xs font-bold py-2 px-4 bg-transparent
-              border-purple/10 rounded-xl cursor-pointer transition-all
+              border-purple/10 rounded-xl cursor-pointer
                hover:bg-gradient-to-br from-[#F8F6F4] to-[#E8DCCA] 
                hover:text-black transition-shadow hover:shadow-lg">
             Super Admin
@@ -27,7 +27,7 @@ const Header = () => {
           <Link to="/admin">
           <div
             className="text-black shadow-xs font-bold py-2 px-4 bg-transparent 
-             border-purple/10 rounded-xl cursor-pointer transition-all 
+             border-purple/10 rounded-xl cursor-pointer 
              hover:bg-gradient-to-br from-[#F8F6F4] to-[#E8DCCA]
              hover:text-black transition-shadow hover:shadow-lg">
             Admin
@@ -36,7 +36,7 @@ const Header = () => {
           <Link to="/">
           <div
             className="text-black shadow-xs font-bold py-2 px-4 bg-transparent 
-             border-purple/10 rounded-xl cursor-pointer transition-all 
+             border-purple/10 rounded-xl cursor-pointer  
              hover:bg-gradient-to-br from-[#F8F6F4] to-[#E8DCCA]
              hover:text-black transition-shadow hover:shadow-lg">
             Student
@@ -53,7 +53,7 @@ const Header = () => {
           />
           <div
             className=" shadow-md py-2 px-4 bg-gradient-to-br from-[#F8F6F4] to-[#E8DCCA]
-             text-black rounded-2xl cursor-pointer transition-all 
+             text-black rounded-2xl cursor-pointer  
              hover:opacity-80 transition-shadow hover:shadow-lg">
             Search
           </div>

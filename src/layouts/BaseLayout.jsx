@@ -3,7 +3,7 @@ import Sidebar from "../components/Sidebar";
 import Header from "../components/Header";
 
 export default function BaseLayout({ children }) {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
